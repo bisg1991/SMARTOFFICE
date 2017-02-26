@@ -134,7 +134,7 @@ public class CommonFunctionsLib {
 		}
 	}
 
-	public static void tryAgain(ErrorHandalingMethod method, int seconds) {
+	/*public static void tryAgain(ErrorHandalingMethod method, int seconds) {
 		int count = 0;
 		while (true) {
 			try {
@@ -149,17 +149,17 @@ public class CommonFunctionsLib {
 				}
 			}
 		}
-	}
+	}*/
 
 	// method for add log to report
 	public static void log(String log, WebDriver driver) throws Exception, IOException {
-		if (driver != null) {
+		/*if (driver != null) {
 			tryAgain(() -> {
 				System.out.println(driver + ": " + log);
 				Reporter.log("<a href=\"" + new CaptureBrowserScreenShot().takeScreenShots(driver) + "\"> " + log
 						+ "</a> <br />");
 			}, 5);
-		}
+		}*/
 	}
 
 	public static void skip(String testName) {
@@ -191,36 +191,8 @@ public class CommonFunctionsLib {
 		}
 	}
 
-	public static void waitUntilTrue(WaitMethods wait, int seconds) {
-		int count = 0;
-		while (true) {
-			if (wait.trueCondition()) {
-				break;
-			} else {
-				CommonFunctionsLib.sleep(1);
-				count++;
-				if (count == seconds) {
-					count = 0;
-					break;
-				}
-			}
-		}
-	}
+	
 
-	public static void waitUntilFalse(WaitMethods wait, int seconds) {
-		int count = 0;
-		while (true) {
-			if (!wait.trueCondition()) {
-				break;
-			} else {
-				CommonFunctionsLib.sleep(1);
-				count++;
-				if (count == seconds) {
-					count = 0;
-					break;
-				}
-			}
-		}
-	}
+	
 }
 

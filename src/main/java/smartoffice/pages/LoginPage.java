@@ -18,7 +18,7 @@ private LoginPageObjects obj;
 		this.driver = driver;
 		this.action = action;
  }
-    public void SignIn(String userName, String password) throws Exception{
+    public AddBuildingPage SignIn(String userName, String password) throws Exception{
     	
     	obj.txtEmail.sendKeys(userName);
     	CommonFunctionsLib.log("Entered the email");
@@ -28,6 +28,8 @@ private LoginPageObjects obj;
     	
     	obj.btnsignin.click();
     	CommonFunctionsLib.log("Clicked on the Sign in button");
+    	
+    	return new AddBuildingPage(driver, action);
     	
     }
 

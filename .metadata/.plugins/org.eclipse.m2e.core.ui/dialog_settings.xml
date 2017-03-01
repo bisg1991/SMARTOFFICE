@@ -20,6 +20,7 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="D:\SMARTOFFICE"/>
 			<item value="G:\SMARTS"/>
 		</list>
 		<list key="projectNameTemplate">

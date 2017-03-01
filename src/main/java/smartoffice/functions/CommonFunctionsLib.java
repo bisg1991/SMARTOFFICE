@@ -14,8 +14,10 @@ import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.SkipException;
 
@@ -40,6 +42,14 @@ public class CommonFunctionsLib {
 	public static int productId = 0;
 	public static int catId = 1;
 
+	
+	
+	public static void selectElementByNameMethod(WebElement element, String Name) {
+		Select selectitem = new Select(element);
+		selectitem.selectByVisibleText(Name);
+		}
+	
+	
 	/**
 	 * Purpose : Constructor with WebDriver argument
 	 * 

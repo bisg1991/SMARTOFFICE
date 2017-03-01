@@ -7,34 +7,33 @@ import org.openqa.selenium.support.PageFactory;
 
 public class AddBuildingPageObjects {
 
-	public AddBuildingPageObjects(WebDriver driver){
-        PageFactory.initElements(driver, this);
+	public AddBuildingPageObjects(WebDriver driver) {
+		PageFactory.initElements(driver, this);
 	}
-  
-	@FindBy(xpath="//ul[@class='side-menu-list']/li[4]/a/span")
+
+	@FindBy(xpath = "//span[contains(text(), 'Settings')]")
 	public WebElement menusetting;
-	
-	@FindBy(xpath="//div[@id='Locations']/div[1]/div[2]/button")
+
+	@FindBy(xpath = "//div[@id='Locations']/div[1]/div[2]/button")
 	public WebElement btnAddBuilding;
 
-    @FindBy(name="name")
-    public WebElement txtname;
-    
-    @FindBy(name="floors")
-    public WebElement txtfloors;
-    
-    @FindBy(id="address")
-    public WebElement txtaddress;
-    
-    /*@FindBy(xpath="//html/body/div[11]/div[1]")  
-    public WebElement seladdress;*/
-    
-    @FindBy(xpath="html/body/div[11]/div")
-    public WebElement seladdress;
-    
-    
-    @FindBy(xpath="//div[@id='modal-location']/form/div/div[2]/div/div/button")
-    public WebElement btnsave;
+	@FindBy(name = "name")
+	public WebElement txtname;
 
+	@FindBy(name = "floors")
+	public WebElement txtfloors;
+
+	@FindBy(id = "address")
+	public WebElement txtaddress;
+
+	/*
+	 * @FindBy(xpath="//html/body/div[11]/div[1]") public WebElement seladdress;
+	 */
+
+	@FindBy(xpath = "html/body/div[11]/div")
+	public WebElement seladdress;
+
+	@FindBy(xpath = "//div[@id='modal-location']/form/div/div[2]/div/div/button")
+	public WebElement btnsave;
 
 }

@@ -26,9 +26,13 @@ public class AddBuildingPage extends LoginPage {
 		objabp=new AddBuildingPageObjects(driver);
 	}
 	
-	public void addNewBuilding(String buildingname) throws InterruptedException{
+	public AddFloorPage addNewBuilding(String buildingname) throws Exception{
 		
-		objabp.menusetting.click();
+		try {
+			action.click(objabp.menusetting);
+		} catch (Exception e) {
+			action.clickByJS(objabp.menusetting);
+		}
 		CommonFunctionsLib.log("Clicked on the Settings option from the left hand side of the menu");
 		
 		objabp.btnAddBuilding.click();
@@ -46,11 +50,13 @@ public class AddBuildingPage extends LoginPage {
 		objabp.txtaddress.sendKeys(Keys.ENTER);
 		CommonFunctionsLib.log("Entered the address for the building");
 		
+		CommonFunctionsLib.sleep(8);
+		
 		objabp.btnsave.click();
 		CommonFunctionsLib.log("Clicked the save button");
 		
 		
-		
+		return new AddFloorPage(driver, action);
 		
 	}
 	

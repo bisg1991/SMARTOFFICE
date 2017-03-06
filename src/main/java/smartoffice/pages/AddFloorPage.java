@@ -15,7 +15,7 @@ public class AddFloorPage extends LoginPage {
 		objafpo=new AddFloorPageObjects(driver);
 	}
 	
-	public void addNewFloor(String buildingname) throws Exception{
+	public AddSpacePage addNewFloor(String buildingname, String floorname) throws Exception{
 		
 		/*objafpo.tabfloors.click();
 		CommonFunctionsLib.log("Clicked on the Floor tab");*/
@@ -35,7 +35,7 @@ public class AddFloorPage extends LoginPage {
 		CommonFunctionsLib.selectElementByNameMethod(objafpo.drpselbuilding, buildingname);
 		CommonFunctionsLib.log("Selected the building name from the dropdown");
 		
-		objafpo.txtflrnme.sendKeys("First");
+		objafpo.txtflrnme.sendKeys(floorname);
 		CommonFunctionsLib.log("Entered the floor name");
 		
 		objafpo.txtflrno.sendKeys("1");
@@ -44,5 +44,6 @@ public class AddFloorPage extends LoginPage {
 		objafpo.btnflrsve.click();
 		CommonFunctionsLib.log("Clicked on the SAVE button");
 		
+		return new AddSpacePage(driver, action);
 	}
 }

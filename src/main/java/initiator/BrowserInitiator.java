@@ -35,8 +35,9 @@ public class BrowserInitiator {
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-		driver.navigate().to("http://sostaging.softwebopensource.com/");
-		CommonFunctionsLib.log("Navigate to 'http://sostaging.softwebopensource.com/'");
+		driver.navigate().to("http://technexus.softwebsmartoffice.com/index#/dashboard");
+		//CommonFunctionsLib.log("Navigate to 'http://sostaging.softwebopensource.com/'");
+		CommonFunctionsLib.log("Navigate to 'http://technexus.softwebsmartoffice.com/index#/dashboard'");
 		action = new WebActions(driver);
 		login = new LoginPage(driver, action);
 	}

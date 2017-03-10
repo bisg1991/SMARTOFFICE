@@ -39,6 +39,8 @@ public class AddSpacePage extends LoginPage {
 		
 		objaspo.selectamenity.click();
 		
+		objaspo.btnsave.click();
+		
 	}
 	
 	

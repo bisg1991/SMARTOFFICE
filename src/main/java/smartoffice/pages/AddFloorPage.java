@@ -44,6 +44,8 @@ public class AddFloorPage extends LoginPage {
 		objafpo.btnflrsve.click();
 		CommonFunctionsLib.log("Clicked on the SAVE button");
 		
+		Thread.sleep(2000);
+		
 		return new AddSpacePage(driver, action);
 	}
 }

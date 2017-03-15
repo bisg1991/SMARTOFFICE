@@ -23,10 +23,10 @@ import org.testng.SkipException;
 
 public class CommonFunctionsLib {
 
-	
-	public static void log(String log){
+	public static void log(String log) {
 		System.out.println(log);
 	}
+
 	public WebDriver driver;
 	WebDriverWait wait;
 	Properties properties;
@@ -42,14 +42,11 @@ public class CommonFunctionsLib {
 	public static int productId = 0;
 	public static int catId = 1;
 
-	
-	
 	public static void selectElementByNameMethod(WebElement element, String Name) {
 		Select selectitem = new Select(element);
 		selectitem.selectByVisibleText(Name);
-		}
-	
-	
+	}
+
 	/**
 	 * Purpose : Constructor with WebDriver argument
 	 * 
@@ -57,8 +54,8 @@ public class CommonFunctionsLib {
 	 */
 	public CommonFunctionsLib(WebDriver driver) {
 		this.driver = driver;
-		locationServiceEnabled = Boolean
-				.parseBoolean(properties.getProperty("locationServiceEnabled").trim().toLowerCase());
+		locationServiceEnabled = Boolean.parseBoolean(properties
+				.getProperty("locationServiceEnabled").trim().toLowerCase());
 		doFullReset = true;
 	}
 
@@ -76,15 +73,16 @@ public class CommonFunctionsLib {
 		}
 	}
 
-	public static void assertTrue(boolean condition, String msg, WebDriver driver) throws Exception, IOException {
+	public static void assertTrue(boolean condition, String msg,
+			WebDriver driver) throws Exception, IOException {
 		if (!condition) {
 			log("Failed log: " + msg, driver);
 			throw new Exception("Functional Fail: " + msg);
 		}
 	}
 
-	public static void assertEquals(String actual, String expected, String msg, WebDriver driver)
-			throws Exception, IOException {
+	public static void assertEquals(String actual, String expected, String msg,
+			WebDriver driver) throws Exception, IOException {
 		if (!actual.equals(expected)) {
 			log("Failed log: " + msg, driver);
 			throw new Exception("Functional Fail: " + msg);
@@ -97,20 +95,30 @@ public class CommonFunctionsLib {
 	 * @param filePath
 	 * @throws AWTException
 	 */
-	static Robot robot;
+	public static Robot robot;
 
 	public static void UploadFile(String filePath) throws AWTException {
+
 		StringSelection stringSelection = new StringSelection(filePath);
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
+		Toolkit.getDefaultToolkit().getSystemClipboard()
+				.setContents(stringSelection, null);
 		robot = new Robot();
 		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.delay(100);
 		robot.keyRelease(KeyEvent.VK_ENTER);
+		robot.delay(100);
 		robot.keyPress(KeyEvent.VK_CONTROL);
+		robot.delay(100);
 		robot.keyPress(KeyEvent.VK_V);
+		robot.delay(100);
 		robot.keyRelease(KeyEvent.VK_V);
+		robot.delay(100);
 		robot.keyRelease(KeyEvent.VK_CONTROL);
+		robot.delay(1000);
 		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.delay(100);
 		robot.keyRelease(KeyEvent.VK_ENTER);
+		robot.delay(100);
 	}
 
 	public static void keyPress(int keycode, int count) {
@@ -144,36 +152,27 @@ public class CommonFunctionsLib {
 		}
 	}
 
-	/*public static void tryAgain(ErrorHandalingMethod method, int seconds) {
-		int count = 0;
-		while (true) {
-			try {
-				method.errorHandlingMethod();
-				break;
-			} catch (Exception e) {
-				CommonFunctionsLib.sleep(1);
-				count++;
-				if (count == seconds) {
-					count = 0;
-					break;
-				}
-			}
-		}
-	}*/
+	/*
+	 * public static void tryAgain(ErrorHandalingMethod method, int seconds) {
+	 * int count = 0; while (true) { try { method.errorHandlingMethod(); break;
+	 * } catch (Exception e) { CommonFunctionsLib.sleep(1); count++; if (count
+	 * == seconds) { count = 0; break; } } } }
+	 */
 
 	// method for add log to report
-	public static void log(String log, WebDriver driver) throws Exception, IOException {
-		/*if (driver != null) {
-			tryAgain(() -> {
-				System.out.println(driver + ": " + log);
-				Reporter.log("<a href=\"" + new CaptureBrowserScreenShot().takeScreenShots(driver) + "\"> " + log
-						+ "</a> <br />");
-			}, 5);
-		}*/
+	public static void log(String log, WebDriver driver) throws Exception,
+			IOException {
+		/*
+		 * if (driver != null) { tryAgain(() -> { System.out.println(driver +
+		 * ": " + log); Reporter.log("<a href=\"" + new
+		 * CaptureBrowserScreenShot().takeScreenShots(driver) + "\"> " + log +
+		 * "</a> <br />"); }, 5); }
+		 */
 	}
 
 	public static void skip(String testName) {
-		throw new SkipException("Skipping " + testName + " as browser is not selected from test execution platform");
+		throw new SkipException("Skipping " + testName
+				+ " as browser is not selected from test execution platform");
 	}
 
 	public static int randInt(int min, int max) {
@@ -185,7 +184,8 @@ public class CommonFunctionsLib {
 		return randomNum;
 	}
 
-	public static void confirmSecurityException(WebActions action, WebDriver driver) throws Exception, IOException {
+	public static void confirmSecurityException(WebActions action,
+			WebDriver driver) throws Exception, IOException {
 		CommonFunctionsLib.sleep(1);
 		try {
 			action.click(driver.findElement(By.id("advancedButton")));
@@ -201,8 +201,4 @@ public class CommonFunctionsLib {
 		}
 	}
 
-	
-
-	
 }
-

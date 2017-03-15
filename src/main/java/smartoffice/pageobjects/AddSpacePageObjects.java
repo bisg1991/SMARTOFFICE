@@ -38,6 +38,10 @@ public class AddSpacePageObjects {
 	@FindBy(xpath="//div[@id='modal-space']/form/div/div[1]/div[7]/div/div[2]/div[1]/input")
 	public WebElement selectamenity;
 	
+	@FindBy(xpath="//div[@id='modal-space']/form/div/div[1]/div[10]/div/div/div/span")
+	public WebElement btnchoosefile;
+	
 	@FindBy(xpath="//div[@id='modal-space']/form/div/div[2]/div/div/button")
 	public WebElement btnsave;
+	
 }

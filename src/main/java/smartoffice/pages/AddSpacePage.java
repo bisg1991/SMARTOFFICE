@@ -33,11 +33,21 @@ public class AddSpacePage extends LoginPage {
 		
 		CommonFunctionsLib.selectElementByNameMethod(objaspo.drpfloor, floorname);
 		
+		objaspo.txtcapacity.clear();
 		objaspo.txtcapacity.sendKeys("10");
 		
 		objaspo.iconamenityexpand.click();
 		
 		objaspo.selectamenity.click();
+		
+		objaspo.btnchoosefile.click();
+		
+		
+		CommonFunctionsLib.UploadFile("C:\\Users\\BISWAJIT\\Desktop\\rooms.jpg");
+		
+		//Runtime.getRuntime().exec("G:/AUTOIT-SMART/meeting.exe");
+		
+		CommonFunctionsLib.sleep(8);
 		
 		objaspo.btnsave.click();
 		

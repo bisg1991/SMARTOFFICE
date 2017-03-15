@@ -50,7 +50,7 @@ public class AddBuildingPage extends LoginPage {
 		objabp.txtaddress.sendKeys(Keys.ENTER);
 		CommonFunctionsLib.log("Entered the address for the building");
 		
-		CommonFunctionsLib.sleep(8);
+		CommonFunctionsLib.sleep(5);
 		
 		objabp.btnsave.click();
 		CommonFunctionsLib.log("Clicked the save button");

@@ -3,6 +3,7 @@ package initiator;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.MarionetteDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -15,6 +16,7 @@ import org.testng.annotations.BeforeSuite;
 import smartoffice.pages.AddBuildingPage;
 import smartoffice.pages.AddFloorPage;
 import smartoffice.pages.LoginPage;
+import smartoffice.functions.Browser;
 import smartoffice.functions.CommonFunctionsLib;
 import smartoffice.functions.WebActions;
 
@@ -23,7 +25,7 @@ public class BrowserInitiator {
 	WebDriver driver;
 	private WebActions action;
 	protected LoginPage login;
-
+    private Browser brwsr;
 
 	@BeforeSuite
 	public void setUp() {
@@ -34,15 +36,15 @@ public class BrowserInitiator {
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-<<<<<<< HEAD
+
 		//driver.navigate().to("http://sostaging.softwebopensource.com/");
 		driver.navigate().to("http://technexus.softwebsmartoffice.com/");
 		CommonFunctionsLib.log("Navigate to 'http://sostaging.softwebopensource.com/'");
-=======
+
 		driver.navigate().to("http://technexus.softwebsmartoffice.com/index#/dashboard");
 		//CommonFunctionsLib.log("Navigate to 'http://sostaging.softwebopensource.com/'");
 		CommonFunctionsLib.log("Navigate to 'http://technexus.softwebsmartoffice.com/index#/dashboard'");
->>>>>>> 7464541a6c88be2cb5dfb229eef3c5ac4ac65286
+
 		action = new WebActions(driver);
 		login = new LoginPage(driver, action);
 	}

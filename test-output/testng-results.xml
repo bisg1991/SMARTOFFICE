@@ -1,30 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results skipped="0" failed="0" total="4" passed="4">
   <reporter-output>
+    <line>
+      <![CDATA[<a href="D:\SMARTOFFICE\Report\Screenshot\17-03-2017_15-04-471.png"> Click on button 'Save'</a> <br />]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="67039" started-at="2017-03-13T18:15:56Z" finished-at="2017-03-13T18:17:03Z">
+  <suite name="Default suite" duration-ms="70014" started-at="2017-03-17T09:33:37Z" finished-at="2017-03-17T09:34:47Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="67039" started-at="2017-03-13T18:15:56Z" finished-at="2017-03-13T18:17:03Z">
+    <test name="Default test" duration-ms="70014" started-at="2017-03-17T09:33:37Z" finished-at="2017-03-17T09:34:47Z">
       <class name="com.saf.so.smartoffice.Starter">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.saf.so.smartoffice.Starter@48140564]" name="setUp" is-config="true" duration-ms="16658" started-at="2017-03-13T23:45:40Z" finished-at="2017-03-13T23:45:56Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.saf.so.smartoffice.Starter@42e26948]" name="setUp" is-config="true" duration-ms="18812" started-at="2017-03-17T15:03:18Z" finished-at="2017-03-17T15:03:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="loginTest()[pri:1, instance:com.saf.so.smartoffice.Starter@48140564]" name="loginTest" duration-ms="1009" started-at="2017-03-13T23:45:56Z" finished-at="2017-03-13T23:45:57Z">
+        <test-method status="PASS" signature="loginTest()[pri:1, instance:com.saf.so.smartoffice.Starter@42e26948]" name="loginTest" duration-ms="724" started-at="2017-03-17T15:03:37Z" finished-at="2017-03-17T15:03:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginTest -->
-        <test-method status="PASS" signature="AddBuildingTest()[pri:2, instance:com.saf.so.smartoffice.Starter@48140564]" name="AddBuildingTest" duration-ms="30161" started-at="2017-03-13T23:45:57Z" finished-at="2017-03-13T23:46:27Z">
+        <test-method status="PASS" signature="AddBuildingTest()[pri:2, instance:com.saf.so.smartoffice.Starter@42e26948]" name="AddBuildingTest" duration-ms="30216" started-at="2017-03-17T15:03:38Z" finished-at="2017-03-17T15:04:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddBuildingTest -->
-        <test-method status="PASS" signature="AddFlrTest()[pri:3, instance:com.saf.so.smartoffice.Starter@48140564]" name="AddFlrTest" duration-ms="13658" started-at="2017-03-13T23:46:27Z" finished-at="2017-03-13T23:46:41Z">
+        <test-method status="PASS" signature="AddFlrTest()[pri:3, instance:com.saf.so.smartoffice.Starter@42e26948]" name="AddFlrTest" duration-ms="13931" started-at="2017-03-17T15:04:08Z" finished-at="2017-03-17T15:04:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddFlrTest -->
-        <test-method status="PASS" signature="AddSpacePage()[pri:4, instance:com.saf.so.smartoffice.Starter@48140564]" name="AddSpacePage" duration-ms="22172" started-at="2017-03-13T23:46:41Z" finished-at="2017-03-13T23:47:03Z">
+        <test-method status="PASS" signature="AddSpacePage()[pri:4, instance:com.saf.so.smartoffice.Starter@42e26948]" name="AddSpacePage" duration-ms="25110" started-at="2017-03-17T15:04:22Z" finished-at="2017-03-17T15:04:47Z">
           <reporter-output>
+            <line>
+              <![CDATA[<a href="D:\SMARTOFFICE\Report\Screenshot\17-03-2017_15-04-471.png"> Click on button 'Save'</a> <br />]]>
+            </line>
           </reporter-output>
         </test-method> <!-- AddSpacePage -->
       </class> <!-- com.saf.so.smartoffice.Starter -->

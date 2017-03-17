@@ -33,7 +33,7 @@ public class Starter extends BrowserInitiator {
 
     @Test(priority= 4)
     public void AddSpacePage() throws Exception{
-    	addspcepge.addspace("SOFTWEB SOLUTIONS", "FIRST");
+    	addspcepge.addspace("SOFTWEB SOLUTIONS", "FIRST", "Meeting Room");
     }
 
 }

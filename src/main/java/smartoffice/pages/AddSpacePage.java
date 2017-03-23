@@ -16,7 +16,7 @@ public class AddSpacePage extends LoginPage {
 		objaspo = new AddSpacePageObjects(driver);
 	}
 
-	public void addspace(String buildingname, String floorname, String spacetype) throws Exception {
+	public CreateMeetingPage addspace(String buildingname, String floorname, String spacetype) throws Exception {
 
 		try {
 			action.click(objaspo.tabspaces);
@@ -44,8 +44,8 @@ public class AddSpacePage extends LoginPage {
 
 		objaspo.btnchoosefile.click();
 
-		 CommonFunctionsLib.UploadFile("C:\\Users\\BISWAJIT\\Desktop\\rooms.jpg"); //HP Laptop
-		//CommonFunctionsLib.UploadFile("C:\\Users\\Biswajit.Ghosh\\Desktop\\rooms.jpg"); // Desktop
+		 //CommonFunctionsLib.UploadFile("C:\\Users\\BISWAJIT\\Desktop\\rooms.jpg"); //HP Laptop
+		 CommonFunctionsLib.UploadFile("C:\\Users\\Biswajit.Ghosh\\Desktop\\rooms.jpg"); // Desktop
 
 		// Runtime.getRuntime().exec("G:/AUTOIT-SMART/meeting.exe"); //Using AutoIT
 
@@ -58,6 +58,7 @@ public class AddSpacePage extends LoginPage {
 		}
         CommonFunctionsLib.log("Click on button 'Save'", driver);
 
+        return new CreateMeetingPage(driver, action);
 	}
 
 }

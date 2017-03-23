@@ -30,19 +30,17 @@ public class BrowserInitiator {
 	@BeforeSuite
 	public void setUp() {
 
-		//System.setProperty("webdriver.gecko.driver", "D:\\Software\\GECKO\\geckodriver.exe");
-		System.setProperty("webdriver.gecko.driver","F:\\seleniumOcm30\\geckodriver-v0.10.0-win64\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", "D:\\Software\\GECKO\\geckodriver.exe");
+		//System.setProperty("webdriver.gecko.driver","F:\\seleniumOcm30\\geckodriver-v0.10.0-win64\\geckodriver.exe");
 		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().implicitlyWait(14, TimeUnit.SECONDS);
 
-		//driver.navigate().to("http://sostaging.softwebopensource.com/");
-		driver.navigate().to("http://technexus.softwebsmartoffice.com/");
+		driver.navigate().to("http://sostaging.softwebopensource.com/");
 		CommonFunctionsLib.log("Navigate to 'http://sostaging.softwebopensource.com/'");
 
-		driver.navigate().to("http://technexus.softwebsmartoffice.com/index#/dashboard");
-		//CommonFunctionsLib.log("Navigate to 'http://sostaging.softwebopensource.com/'");
+		//driver.navigate().to("http://technexus.softwebsmartoffice.com/index#/dashboard");
 		CommonFunctionsLib.log("Navigate to 'http://technexus.softwebsmartoffice.com/index#/dashboard'");
 
 		action = new WebActions(driver);

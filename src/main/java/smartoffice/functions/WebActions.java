@@ -948,4 +948,14 @@ public class WebActions {
 		JavascriptExecutor jse = (JavascriptExecutor) driver;
 		jse.executeScript("scroll(0, " + point + ");");
 	}
+	
+	public void printnames(WebElement el){
+		List<WebElement> drop = driver.findElements((By) el);
+		java.util.Iterator<WebElement> i = drop.iterator();
+		while(i.hasNext()) {
+		    WebElement row = i.next();
+		    System.out.println(row.getText());
+		    el.click();
+		}
+	}
 }

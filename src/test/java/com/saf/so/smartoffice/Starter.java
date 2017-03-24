@@ -7,6 +7,7 @@ import smartoffice.pages.AddBuildingPage;
 import smartoffice.pages.AddFloorPage;
 import smartoffice.pages.AddSpacePage;
 import smartoffice.pages.BookMeetingPage;
+import smartoffice.pages.CreateEventIconPage;
 import smartoffice.pages.CreateMeetingPage;
 
 public class Starter extends BrowserInitiator {
@@ -16,15 +17,23 @@ public class Starter extends BrowserInitiator {
     private AddSpacePage addspcepge;
     private CreateMeetingPage createmeet;
     private BookMeetingPage bkmeet;
+    private CreateEventIconPage eip;
 	
 	
 	@Test(priority = 1)
 	public void loginTest() throws Exception {
 		
-		addbuilpge = login.SignIn("rohan@softwebsolutions.com", "123456");
+		//addbuilpge = login.SignIn("rohan@softwebsolutions.com", "123456");
+		eip = login.SignIns("bg25@mailinator.com", "123456");
+	}
+	
+	@Test(priority = 2)
+	public void AddBuildingTest() throws Exception {
+		
+		eip.createmeetingfromicon("Friday Meeting", "bg3@mailinator.com");
 	}
 
-	@Test(priority = 2)
+	/*@Test(priority = 2)
 	public void AddBuildingTest() throws Exception {
 		
 		addflrpge = addbuilpge.addNewBuilding("Auda garden");
@@ -48,5 +57,5 @@ public class Starter extends BrowserInitiator {
     @Test(priority= 6)
     public void meetingbook() throws Exception{
     	bkmeet.bookameeting("Meeting on 23th March", "alpesh.solanki@softwebsolutions.com", "test amenities via automation", "test catering via automation", "Auda bodakdev");
-    }
+    }*/
 }

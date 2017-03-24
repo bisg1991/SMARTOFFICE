@@ -6,9 +6,7 @@
       <class name="com.saf.so.smartoffice.Starter">
         <methods>
           <include name="setUp"/>
-          <include name="AddSpacePage"/>
-          <include name="meetingcreate"/>
-          <include name="meetingbook"/>
+          <include name="AddBuildingTest"/>
         </methods>
       </class> <!-- com.saf.so.smartoffice.Starter -->
     </classes>

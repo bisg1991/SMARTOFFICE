@@ -38,6 +38,8 @@ public class BookMeetingPage extends LoginPage {
 		
 		bmpo.btnbooknw.click();
 		
+		
+		
 	}
 	
 	

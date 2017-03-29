@@ -18,6 +18,7 @@ import smartoffice.pages.AddFloorPage;
 import smartoffice.pages.LoginPage;
 import smartoffice.functions.Browser;
 import smartoffice.functions.CommonFunctionsLib;
+import smartoffice.functions.Keyboard;
 import smartoffice.functions.WebActions;
 
 public class BrowserInitiator {
@@ -26,7 +27,8 @@ public class BrowserInitiator {
 	private WebActions action;
 	protected LoginPage login;
     private Browser brwsr;
-
+    private Keyboard kb;
+    
 	@BeforeSuite
 	public void setUp() {
 
@@ -35,15 +37,16 @@ public class BrowserInitiator {
 		driver = new FirefoxDriver();
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().implicitlyWait(14, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 		driver.navigate().to("http://sostaging.softwebopensource.com/");
 		CommonFunctionsLib.log("Navigate to 'http://sostaging.softwebopensource.com/'");
 
 		//driver.navigate().to("http://technexus.softwebsmartoffice.com/index#/dashboard");
-		CommonFunctionsLib.log("Navigate to 'http://technexus.softwebsmartoffice.com/index#/dashboard'");
+		//CommonFunctionsLib.log("Navigate to 'http://technexus.softwebsmartoffice.com/index#/dashboard'");
 
 		action = new WebActions(driver);
+		kb=new Keyboard(driver);
 		login = new LoginPage(driver, action);
 	}
 

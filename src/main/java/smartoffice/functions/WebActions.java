@@ -38,7 +38,7 @@ public class WebActions {
 	final int timeout = 10;
 	Actions builder = null;
 
-	public static final int CLICK_TIMEOUT_SECONDS = 10;
+	public static final int CLICK_TIMEOUT_SECONDS = 15;
 	public static final int PRESENCE_TIMEOUT_SECONDS = 5;
 	public static final int POLLING_WITH_REFRESH_TIMEOUT_SECONDS = 30;
 	public static final int REFRESH_TIMEOUT_SECONDS = 5;

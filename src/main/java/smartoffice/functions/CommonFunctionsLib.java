@@ -139,6 +139,7 @@ public class CommonFunctionsLib {
 		clpbrd.setContents(stringSelection, null);
 	}
 
+	
 	/***
 	 * 
 	 * @param location

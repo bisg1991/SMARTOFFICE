@@ -50,7 +50,20 @@ public class LoginPage {
 
 	}
 
+	public ImportUserPage Sign(String userName, String password) throws Exception {
 
+		obj.txtEmail.sendKeys(userName);
+		CommonFunctionsLib.log("Entered the email");
+
+		obj.txtpassword.sendKeys(password);
+		CommonFunctionsLib.log("Entered the password");
+
+		obj.btnsignin.click();
+		CommonFunctionsLib.log("Clicked on the Sign in button");
+
+		return new ImportUserPage(driver, action);
+
+	}
 
 
 

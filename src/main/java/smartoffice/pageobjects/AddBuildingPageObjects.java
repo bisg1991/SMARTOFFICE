@@ -11,7 +11,10 @@ public class AddBuildingPageObjects {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath = "//span[contains(text(), 'Settings')]")
+	/*@FindBy(xpath = "//span[contains(text(), 'Settings')]")
+	public WebElement menusetting;*/
+	
+	@FindBy(xpath = "//html/body/nav/ul/li[4]/a/span")
 	public WebElement menusetting;
 
 	@FindBy(xpath = "//div[@id='Locations']/div[1]/div[2]/button")

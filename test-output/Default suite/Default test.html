@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>5/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>6/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Mar 28 13:06:17 IST 2017</td>
+<td>Started on:</td><td>Thu Mar 30 17:22:38 IST 2017</td>
 </tr>
-<tr><td>Total time:</td><td>351 seconds (351637 ms)</td>
+<tr><td>Total time:</td><td>125 seconds (125861 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,124 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.saf.so.smartoffice.Starter.meetingbook()'><b>meetingbook</b><br>Test class: com.saf.so.smartoffice.Starter<br>Parameters: {email=biswajit.ghosh2@softwebsolutions.com, catering=test, amenities=test, venue=test, title=title}</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: #title
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.0.0-beta4&apos;, revision: &apos;3169782&apos;, time: &apos;2016-09-29 10:30:04 -0700&apos;
+System info: host: &apos;PC4155&apos;, ip: &apos;192.168.4.155&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, appBuildId=20170125094131, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=7856, browserVersion=51.0.1, platformVersion=6.1, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: e899c2de-81d5-43ea-8507-dec679ce160c
+*** Element info: {Using=id, value=title}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:126)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:93)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:42)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:369)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:418)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy8.sendKeys(Unknown Source)
+	at smartoffice.pages.BookMeetingPage.bookameeting(BookMeetingPage.java:56)
+	at com.saf.so.smartoffice.Starter.meetingbook(Starter.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:100)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:811)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1129)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:746)
+	at org.testng.TestRunner.run(TestRunner.java:600)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1264)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1189)
+	at org.testng.TestNG.runSuites(TestNG.java:1104)
+	at org.testng.TestNG.run(TestNG.java:1076)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1298380324", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1298380324'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: #title
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.0.0-beta4&apos;, revision: &apos;3169782&apos;, time: &apos;2016-09-29 10:30:04 -0700&apos;
+System info: host: &apos;PC4155&apos;, ip: &apos;192.168.4.155&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{rotatable=false, raisesAccessibilityExceptions=false, marionette=true, appBuildId=20170125094131, version=, platform=XP, proxy={}, command_id=1, specificationLevel=0, acceptSslCerts=false, processId=7856, browserVersion=51.0.1, platformVersion=6.1, XULappId={ec8030f7-c20a-464f-9b0e-13a3a9e97384}, browserName=firefox, takesScreenshot=true, takesElementScreenshot=true, platformName=windows_nt}]
+Session ID: e899c2de-81d5-43ea-8507-dec679ce160c
+*** Element info: {Using=id, value=title}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:126)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:93)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:42)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:163)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:369)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:418)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy8.sendKeys(Unknown Source)
+	at smartoffice.pages.BookMeetingPage.bookameeting(BookMeetingPage.java:56)
+	at com.saf.so.smartoffice.Starter.meetingbook(Starter.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:100)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:646)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:811)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1129)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:746)
+	at org.testng.TestRunner.run(TestRunner.java:600)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:366)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:361)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:319)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:268)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1264)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1189)
+	at org.testng.TestNG.runSuites(TestNG.java:1104)
+	at org.testng.TestNG.run(TestNG.java:1076)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:126)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:152)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:57)
+</pre></div></td>
+<td>14</td>
+<td>com.saf.so.smartoffice.Starter@204f30ec</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,37 +193,42 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.saf.so.smartoffice.Starter2.AddBuildingTest()'><b>AddBuildingTest</b><br>Test class: com.saf.so.smartoffice.Starter2</td>
+<td title='com.saf.so.smartoffice.Starter.AddBuildingTest()'><b>AddBuildingTest</b><br>Test class: com.saf.so.smartoffice.Starter</td>
 <td></td>
-<td>33</td>
-<td>com.saf.so.smartoffice.Starter2@42e26948</td></tr>
+<td>34</td>
+<td>com.saf.so.smartoffice.Starter@204f30ec</td></tr>
 <tr>
-<td title='com.saf.so.smartoffice.Starter2.AddFlrTest()'><b>AddFlrTest</b><br>Test class: com.saf.so.smartoffice.Starter2</td>
+<td title='com.saf.so.smartoffice.Starter.AddFlrTest()'><b>AddFlrTest</b><br>Test class: com.saf.so.smartoffice.Starter</td>
 <td></td>
 <td>18</td>
-<td>com.saf.so.smartoffice.Starter2@42e26948</td></tr>
+<td>com.saf.so.smartoffice.Starter@204f30ec</td></tr>
 <tr>
-<td title='com.saf.so.smartoffice.Starter2.AddSpacePage()'><b>AddSpacePage</b><br>Test class: com.saf.so.smartoffice.Starter2<br/>
-<a href="#Output-211090736" onClick='toggleBox("Output-211090736", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.saf.so.smartoffice.Starter.AddSpacePage()'><b>AddSpacePage</b><br>Test class: com.saf.so.smartoffice.Starter<br/>
+<a href="#Output-1241480588" onClick='toggleBox("Output-1241480588", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-211090736" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-211090736">
-<a href="D:\SMARTOFFICE\Report\Screenshot\28-03-2017_13-07-441.png"> Click on button 'Save'</a> <br /><br/>
+<a href="#Output-1241480588" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1241480588">
+<a href="D:\SMARTOFFICE\Report\Screenshot\30-03-2017_17-24-061.png"> Click on button 'Save'</a> <br /><br/>
 </div>
 </td>
 <td></td>
 <td>34</td>
-<td>com.saf.so.smartoffice.Starter2@42e26948</td></tr>
+<td>com.saf.so.smartoffice.Starter@204f30ec</td></tr>
 <tr>
-<td title='com.saf.so.smartoffice.Starter2.loginTest()'><b>loginTest</b><br>Test class: com.saf.so.smartoffice.Starter2</td>
+<td title='com.saf.so.smartoffice.Starter.loginTest()'><b>loginTest</b><br>Test class: com.saf.so.smartoffice.Starter</td>
 <td></td>
 <td>0</td>
-<td>com.saf.so.smartoffice.Starter2@42e26948</td></tr>
+<td>com.saf.so.smartoffice.Starter@204f30ec</td></tr>
 <tr>
-<td title='com.saf.so.smartoffice.Starter2.meetfromicon()'><b>meetfromicon</b><br>Test class: com.saf.so.smartoffice.Starter2</td>
+<td title='com.saf.so.smartoffice.Starter.meetingbook()'><b>meetingbook</b><br>Test class: com.saf.so.smartoffice.Starter<br>Parameters: {email=biswajit.ghosh@softwebsolutions.com, catering=Tea  and coffee required, amenities=Extra chairs required, venue=Auda Garden, title=Meeting on Thursday at softweb}</td>
 <td></td>
-<td>264</td>
-<td>com.saf.so.smartoffice.Starter2@42e26948</td></tr>
+<td>4</td>
+<td>com.saf.so.smartoffice.Starter@204f30ec</td></tr>
+<tr>
+<td title='com.saf.so.smartoffice.Starter.meetingcreate()'><b>meetingcreate</b><br>Test class: com.saf.so.smartoffice.Starter</td>
+<td></td>
+<td>17</td>
+<td>com.saf.so.smartoffice.Starter@204f30ec</td></tr>
 </table><p>
 </body>
 </html>

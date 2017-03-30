@@ -6,9 +6,7 @@ import initiator.BrowserInitiator;
 import smartoffice.pages.AddBuildingPage;
 import smartoffice.pages.AddFloorPage;
 import smartoffice.pages.AddSpacePage;
-import smartoffice.pages.BookMeetingPage;
 import smartoffice.pages.CreateEventIconPage;
-import smartoffice.pages.CreateMeetingPage;
 
 // Login > create building > create floor > create space > book meeting on all the available spaces from the create event button present at the top header.
 
@@ -43,8 +41,9 @@ public class Starter2 extends BrowserInitiator {
 
     @Test(priority = 5)
 	public void meetfromicon() throws Exception {
-		
+		 
 		eip.createmeetingfromicon("Monday Meeting", "naimesh.prajapati@softwebsolutions.com");
+		  
 	}
 
 

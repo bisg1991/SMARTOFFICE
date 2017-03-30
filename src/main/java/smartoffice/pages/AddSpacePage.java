@@ -45,6 +45,8 @@ public class AddSpacePage extends LoginPage {
 		objaspo.selectamenity.click();
 
 		objaspo.btnchoosefile.click();
+		
+		CommonFunctionsLib.sleep(1);
 
 		 //CommonFunctionsLib.UploadFile("C:\\Users\\BISWAJIT\\Desktop\\rooms.jpg"); //HP Laptop
 		 CommonFunctionsLib.UploadFile("C:\\Users\\Biswajit.Ghosh\\Desktop\\rooms.jpg"); // Desktop

@@ -3,12 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.saf.so.smartoffice.Starter2">
+      <class name="com.saf.so.smartoffice.Starter">
         <methods>
           <include name="setUp"/>
-          <include name="meetfromicon"/>
+          <include name="destory"/>
+          <include name="meetingbook" invocation-numbers="1"/>
         </methods>
-      </class> <!-- com.saf.so.smartoffice.Starter2 -->
+      </class> <!-- com.saf.so.smartoffice.Starter -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

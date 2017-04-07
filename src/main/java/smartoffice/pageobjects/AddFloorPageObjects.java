@@ -27,8 +27,11 @@ public class AddFloorPageObjects {
 	@FindBy(name="floors")
 	public WebElement txtflrno;
 
-	@FindBy(id="floorsave")
+	/*@FindBy(id="floorsave")
+	public WebElement btnflrsve;*/   //for sostaging
+	
+	@FindBy(xpath="//div[@id='modal-location']/form/div/div[2]/div/div/button")
 	public WebElement btnflrsve;
-
+    
 
 }

@@ -26,7 +26,7 @@ public class CreateEventIconPageObjects {
     @FindBy(css="div.col-md-4 > button.btn.btn-primary")
     public WebElement btnbooknow;
 
-
+    
 
 
 

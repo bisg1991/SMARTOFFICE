@@ -28,6 +28,7 @@ public class AddBuildingPage extends LoginPage {
 	
 	public AddFloorPage addNewBuilding(String buildingname) throws Exception{
 		
+		
 		try {
 			action.click(objabp.menusetting);
 		} catch (Exception e) {
@@ -48,7 +49,10 @@ public class AddBuildingPage extends LoginPage {
 		Thread.sleep(2000);
 		objabp.txtaddress.sendKeys(Keys.DOWN);
 		objabp.txtaddress.sendKeys(Keys.ENTER);
+		
 		CommonFunctionsLib.log("Entered the address for the building");
+		
+		action.scrollToElenent(objabp.btnsave);
 		
 		CommonFunctionsLib.sleep(5);
 		

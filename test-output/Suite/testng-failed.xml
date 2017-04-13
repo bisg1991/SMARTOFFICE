@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <parameter name="browser" value="Firefox"/>
+  <test name="Test(failed)">
+    <parameter name="browser" value="Firefox"/>
+    <classes>
+      <class name="com.saf.so.smartoffice.Starter4">
+        <methods>
+          <include name="loginTest"/>
+          <include name="meetfromicon"/>
+          <include name="meetfromicon"/>
+        </methods>
+      </class> <!-- com.saf.so.smartoffice.Starter4 -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

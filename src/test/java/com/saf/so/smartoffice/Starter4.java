@@ -18,34 +18,19 @@ public class Starter4 extends BrowserInitiator {
 		create = login.SignIns("bis02@mailinator.com", "123456");
 	}
 
-	/*
-	 * Hashtable<String, String> tbl = new Hashtable<>();2
-	 * 
-	 * @Test(priority = 3, dataProvider = "readData") public void
-	 * meetfromicon(Hashtable<String, String> bhisva) {
-	 * tbl.put(bhisva.get("Title"), bhisva.get("emails")); }
-	 */
-	/*ArrayList<Hashtable<String, String>> list = new ArrayList<>();
-
-	@Test(priority = 2, dataProvider= "readData")
-	public void meetfromicon(Hashtable<String, String> data) {
-		System.out.println("here!!");
-		list.add(data);
-		System.out.println("data list: " + data);
-	}*/
 	
-/*	@Test(priority = 2, dataProvider = "readData")
-	public void test(Hashtable<String, String> data) {
-		System.out.println("here!!");
-		list.add(data);
-		System.out.println("data list: " + data);
-	}*/
+    private ArrayList<String> title = new ArrayList<>();
+	private ArrayList<String> emails = new ArrayList<>();
 
-	@Test(priority = 2)
+	@Test(priority = 2, dataProvider = "readData")
+	public void meetfromicon(Hashtable<String, String> data) {
+		title.add(data.get("Title"));
+		emails.add(data.get("emails"));
+	}
+
+	@Test(priority = 3)
 	public void meetfromicon() throws Exception {
-
-		//create.meetfromicon(list);
-		create.meetfromsearchpage();
+		create.meetfromsearchpage(title, emails);
 	}
 
 }

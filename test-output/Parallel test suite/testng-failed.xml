@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Parallel test suite]" parallel="tests">
+  <parameter name="browser" value="IE"/>
+  <test name="Internet Explorer Test(failed)" parallel="tests">
+    <parameter name="browser" value="IE"/>
+    <classes>
+      <class name="com.saf.so.smartoffice.Starter4">
+        <methods>
+          <include name="setUp"/>
+          <include name="loginTest"/>
+          <include name="meetfromicon"/>
+          <include name="meetfromicon"/>
+        </methods>
+      </class> <!-- com.saf.so.smartoffice.Starter4 -->
+    </classes>
+  </test> <!-- Internet Explorer Test(failed) -->
+  <test name="Chrome Test(failed)" parallel="tests">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="com.saf.so.smartoffice.Starter4">
+        <methods>
+          <include name="setUp"/>
+          <include name="loginTest"/>
+          <include name="meetfromicon"/>
+          <include name="meetfromicon"/>
+        </methods>
+      </class> <!-- com.saf.so.smartoffice.Starter4 -->
+    </classes>
+  </test> <!-- Chrome Test(failed) -->
+  <test name="Firefox Test(failed)" parallel="tests">
+    <parameter name="browser" value="Firefox"/>
+    <classes>
+      <class name="com.saf.so.smartoffice.Starter4">
+        <methods>
+          <include name="setUp"/>
+          <include name="loginTest"/>
+          <include name="meetfromicon"/>
+          <include name="meetfromicon"/>
+        </methods>
+      </class> <!-- com.saf.so.smartoffice.Starter4 -->
+    </classes>
+  </test> <!-- Firefox Test(failed) -->
+</suite> <!-- Failed suite [Parallel test suite] -->

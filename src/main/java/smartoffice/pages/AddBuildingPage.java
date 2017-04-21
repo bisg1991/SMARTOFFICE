@@ -1,19 +1,11 @@
 package smartoffice.pages;
 
-import java.awt.event.KeyEvent;
-import java.util.List;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Action;
-import org.openqa.selenium.interactions.Actions;
 
+import smartoffice.functions.CommonFunctionsLib;
 import smartoffice.functions.WebActions;
 import smartoffice.pageobjects.AddBuildingPageObjects;
-import smartoffice.pages.LoginPage;
-import smartoffice.functions.CommonFunctionsLib;
 
 
 
@@ -28,6 +20,10 @@ public class AddBuildingPage extends LoginPage {
 	
 	public AddFloorPage addNewBuilding(String buildingname) throws Exception{
 		
+		CommonFunctionsLib.sleep(1);
+		
+		System.out.println("title: " + driver.getTitle());
+
 		
 		try {
 			action.click(objabp.menusetting);

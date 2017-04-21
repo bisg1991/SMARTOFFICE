@@ -5,6 +5,7 @@ import java.util.Hashtable;
 import org.testng.annotations.Test;
 
 import initiator.BrowserInitiator;
+import initiator.Grid_2;
 import smartoffice.pages.AddBuildingPage;
 import smartoffice.pages.AddFloorPage;
 import smartoffice.pages.AddSpacePage;
@@ -12,7 +13,7 @@ import smartoffice.pages.BookMeetingPage;
 import smartoffice.pages.CreateMeetingPage;
 
 // Login > create building > create floor > create space > and book a meeting on the space that was created recently.
-public class Starter extends BrowserInitiator {
+public class Starter extends Grid_2 {
 
 	private AddBuildingPage addbuilpge;
 	private AddFloorPage addflrpge;
@@ -23,8 +24,8 @@ public class Starter extends BrowserInitiator {
 	@Test(priority = 1)
 	public void loginTest() throws Exception {
 
-		addbuilpge = login.SignIn("bg25@mailinator.com", "123456");
-
+		addbuilpge = login.SignIn("naimesh.prajapati@softwebsolutions.com","qwerty");
+       
 	}
 
 	@Test(priority = 2)
@@ -38,7 +39,7 @@ public class Starter extends BrowserInitiator {
 		addspcepge = addflrpge.addNewFloor("SOFTWEB SOLUTIONS", "FIRST");
 	}
 
-	@Test(priority = 4)
+	/*@Test(priority = 4)
 	public void AddSpacePage() throws Exception {
 		createmeet = addspcepge.addspace("SOFTWEB SOLUTIONS", "FIRST", "Meeting Room");
 
@@ -53,7 +54,7 @@ public class Starter extends BrowserInitiator {
 	public void meetingbook(Hashtable<String, String> data) throws Exception {
 		
        bkmeet.bookameeting(data.get("title"), data.get("email"), data.get("amenities"), data.get("catering"),data.get("venue"));
-	}
+	}*/
 	
 
 }

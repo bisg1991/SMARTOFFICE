@@ -1,17 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <parameter name="browser" value="Firefox"/>
-  <test name="Test(failed)">
-    <parameter name="browser" value="Firefox"/>
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <parameter name="browser" value="Chrome"/>
+  <parameter name="driver.name" value="Chrome"/>
+  <test name="TestSuite2(failed)" parallel="tests">
+    <parameter name="driver.name" value="Chrome"/>
     <classes>
-      <class name="com.saf.so.smartoffice.Starter4">
+      <class name="com.saf.so.smartoffice.Starter3">
         <methods>
-          <include name="loginTest"/>
-          <include name="meetfromicon"/>
-          <include name="meetfromicon"/>
+          <include name="addusermembertest"/>
+          <include name="afterTest"/>
+          <include name="SETUP"/>
         </methods>
-      </class> <!-- com.saf.so.smartoffice.Starter4 -->
+      </class> <!-- com.saf.so.smartoffice.Starter3 -->
+      <class name="com.saf.so.smartoffice.Starter">
+        <methods>
+          <include name="afterTest"/>
+          <include name="SETUP"/>
+        </methods>
+      </class> <!-- com.saf.so.smartoffice.Starter -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- TestSuite2(failed) -->
+  <test name="TestSuite1(failed)" parallel="tests">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="com.saf.so.smartoffice.Starter">
+        <methods>
+          <include name="AddBuildingTest"/>
+          <include name="afterTest"/>
+          <include name="AddFlrTest"/>
+          <include name="SETUP"/>
+        </methods>
+      </class> <!-- com.saf.so.smartoffice.Starter -->
+      <class name="com.saf.so.smartoffice.Starter3">
+        <methods>
+          <include name="afterTest"/>
+          <include name="SETUP"/>
+        </methods>
+      </class> <!-- com.saf.so.smartoffice.Starter3 -->
+    </classes>
+  </test> <!-- TestSuite1(failed) -->
 </suite> <!-- Failed suite [Suite] -->

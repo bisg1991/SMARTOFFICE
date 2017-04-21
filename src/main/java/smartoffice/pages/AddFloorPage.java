@@ -19,7 +19,7 @@ public class AddFloorPage extends LoginPage {
 		
 		/*objafpo.tabfloors.click();
 		CommonFunctionsLib.log("Clicked on the Floor tab");*/
-		
+		CommonFunctionsLib.sleep(3);
 		try {
 			action.click(objafpo.tabfloors);
 		} catch (Exception e) {
@@ -28,7 +28,7 @@ public class AddFloorPage extends LoginPage {
 		}
 		CommonFunctionsLib.log("Clicked on the Floor tab");
 		
-		
+	
 		objafpo.btnaddfloors.click();
 		CommonFunctionsLib.log("Clicked on Add Floor button");
 		

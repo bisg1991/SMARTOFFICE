@@ -20,6 +20,7 @@ public class AddSpacePage extends LoginPage {
 
 	public CreateMeetingPage addspace(String buildingname, String floorname, String spacetype) throws Exception {
 
+		CommonFunctionsLib.sleep(3);
 		try {
 			action.click(objaspo.tabspaces);
 		} catch (Exception e) {
@@ -68,6 +69,7 @@ public class AddSpacePage extends LoginPage {
 	
 	public CreateEventIconPage addspace2(String buildingname, String floorname, String spacetype) throws Exception {
 
+		CommonFunctionsLib.sleep(3);
 		try {
 			action.click(objaspo.tabspaces);
 		} catch (Exception e) {

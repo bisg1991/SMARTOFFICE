@@ -15,7 +15,7 @@ public class Starter4 extends BrowserInitiator {
 	@Test(priority = 1)
 	public void loginTest() throws Exception {
 		System.out.println("here1!!");
-		create = login.SignIns("bis02@mailinator.com", "123456");
+		create = login.SignIns("naimesh.prajapati@softwebsolutions.com", "qwerty");
 	}
 
 	

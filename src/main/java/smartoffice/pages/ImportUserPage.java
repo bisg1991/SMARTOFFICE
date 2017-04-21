@@ -21,6 +21,7 @@ public class ImportUserPage extends LoginPage {
 	 
 	public void inviteuser() throws Exception{
 		
+		CommonFunctionsLib.sleep(2);
 		try {
 			action.click(abpo2.menusetting);
 		} catch (Exception e) {
@@ -28,7 +29,7 @@ public class ImportUserPage extends LoginPage {
 		}
 		
 		impusr.tabusers.click();
-		CommonFunctionsLib.sleep(1);
+		CommonFunctionsLib.sleep(3);
 		impusr.btninvitenewmembers.click();
 		impusr.btmimportcsv.click();
 		CommonFunctionsLib.sleep(2);

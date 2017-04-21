@@ -1,5 +1,7 @@
 package smartoffice.pages;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 
 import smartoffice.functions.CommonFunctionsLib;
@@ -17,6 +19,7 @@ public class LoginPage {
 		obj = new LoginPageObjects(driver);
 		this.driver = driver;
 		this.action = action;
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	}
 
 	public AddBuildingPage SignIn(String userName, String password) throws Exception {
